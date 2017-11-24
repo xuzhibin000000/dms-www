@@ -1,0 +1,645 @@
+// 加载字体图标
+@import './iconfont2/iconfont.css';
+@import './iconfont/iconfont.css';
+@import './animate.css';
+// @import './global.css';
+@import './loading.css';
+// @import './iconfont1/iconfont.css';
+
+// 配色1
+@import './styles01.less';
+// 配色2
+@import './styles02.less';
+// 配色3
+@import './styles03.less';
+
+body, div, span, header, footer, nav, section, aside, article, ul, dl, dt, dd, li, a, p, h1, h2, h3, h4,h5, h6, i, b, textarea, button, input, select, figure, figcaption {
+ padding: 0;
+ margin: 0;
+ list-style: none;
+ font-style: normal;
+ text-decoration: none;
+ border: none;
+ font-family: "Microsoft Yahei",sans-serif;
+ -webkit-tap-highlight-color:transparent;
+ -webkit-font-smoothing: antialiased;
+ &:focus {
+  outline: none;
+ }
+}
+
+.default-style{
+  .style(@headerBg_1, @activeTitleBg_1, @homeTitleColor_1, @homeNumColor_1, @mainBtnBg_1, @homeActiveBg_1, @tableThBg_1
+  , @tableBtnBg_1, @appTitleBg_1, @appSelectTabActiveBg_1, @copyBtnBg_1);
+}
+
+.style-one{
+  .style(@headerBg_2, @activeTitleBg_2, @homeTitleColor_2, @homeNumColor_2, @mainBtnBg_2, @homeActiveBg_2, @tableThBg_2
+  , @tableBtnBg_2, @appTitleBg_2, @appSelectTabActiveBg_2, @copyBtnBg_2);
+  .king-header-nav{
+    a{
+      color: #FFF!important;
+    }
+  }
+}
+
+.style-two{
+  .style(@headerBg_3, @activeTitleBg_3, @homeTitleColor_3, @homeNumColor_3, @mainBtnBg_3, @homeActiveBg_3, @tableThBg_3
+  , @tableBtnBg_3, @appTitleBg_3, @appSelectTabActiveBg_3, @copyBtnBg_3);
+  .king-header-nav{
+    a{
+      color: #FFF!important;
+    }
+  }
+}
+
+.style(@headerBg, @activeTitleBg, @homeTitleColor, @homeNumColor, @mainBtnBg, @homeActiveBg, @tableThBg
+  , @tableBtnBg, @appTitleBg, @appSelectTabActiveBg, @copyBtnBg) {
+  .app-home-box .app-home .app-home-title{
+    color: @homeTitleColor;
+  }
+  .app-home-box .app-home .top .left .left-title-child-list ul li .right{
+    color: @homeNumColor;
+  }
+  .app-button{
+    background: @mainBtnBg;
+  }
+  .app-button-text {
+    background-color: #FFF;
+    color: #089F48;
+  }
+  .app-header{
+    background: @headerBg;
+  }
+  .el-table th, .el-table th div{
+    background: @tableThBg;
+  }
+  .el-message-box__message{
+    p{
+      word-wrap: break-word;
+      word-break: normal;
+    }
+  }
+  // *{
+  //   cursor: none!important;
+  // }
+  .app-input-disabled{
+    background: #D5D5D5!important;
+    color: #74777A!important;
+  }
+  .dialog-title{
+    color: #373D41;
+    text-align: center;
+    font-size: 18px;
+    position: relative;
+    top: -30px;
+    z-index: -1;
+  }
+  .el-tabs__item{
+    border-top-left-radius: 10px!important;
+    border-top-right-radius: 10px!important;
+  }
+  // 表格样式
+  .app-custom-table{
+    .el-radio__label{
+      font-size: 10px;
+    }
+    // 设置表格基本样式
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: separate;
+    > thead > tr > th,
+    > tbody > tr > th,
+    > tfoot > tr > th,
+    > thead > tr > td,
+    > tbody > tr > td,
+    > tfoot > tr > td {
+      padding: 0.7rem;
+      line-height: 1.6;
+      vertical-align: top;
+      border-top: 1px solid #ddd;
+    }
+    > thead > tr > th {
+      vertical-align: bottom;
+      border-bottom: 1px solid #ddd;
+    }
+    > caption + thead > tr:first-child > th,
+    > colgroup + thead > tr:first-child > th,
+    > thead:first-child > tr:first-child > th,
+    > caption + thead > tr:first-child > td,
+    > colgroup + thead > tr:first-child > td,
+    > thead:first-child > tr:first-child > td {
+      border-top: 0;
+    }
+    > tbody + tbody tr:first-child td {
+      border-top: 2px solid #ddd;
+    }
+    // 设置文字居中
+    .app-tc;
+    // 设置tbody样式
+    tbody{
+      tr{
+        // 设置鼠标移入小手
+        .app-pointer;
+        td{
+          text-align: center;
+          // 设置鼠标移入td样式
+          &:hover{
+
+          }
+          // 设置td背景为白色
+          background: #eee;
+          // 设置上边框
+          border-top: 1px solid #ddd;
+          font-size: 12px;
+          color: #354661;
+          letter-spacing: 0;
+          min-height: 30px;
+          // word-break: break-all;
+          // line-height: 24px;
+          padding: 5px 0;
+          // span文字颜色
+          span{
+            // color:@tableTdSpanColor;
+            border-bottom: 1px solid #007E41;
+            text-align: center;
+          }
+          label{
+            span{
+              border-bottom:none;
+            }
+          }
+        }
+        // 设置单数背景颜色
+        &:nth-child(odd){
+          td{
+            background: #F9F9F9;
+          }
+        }
+        // 鼠标移入tr时样式
+        &:hover td{
+
+        }
+      }
+    }
+    // 设置表头样式
+    thead{
+      tr{
+        td,th{
+          text-align: center;
+          background: #373D41;
+          height: 30px;
+          font-size: 12px;
+          color: #FFFFFF;
+          letter-spacing: 0;
+          padding: 0;
+        }
+        th.checkbox{
+          width: 40px;
+        }
+      }
+    }
+    // 设置表格宽度不被文字撑大
+    .app-table-fixed;
+    // 设置表格th,td统一样式
+    th,td{
+      // 设置文字自动换行
+      word-wrap: break-word;
+      // 设置文字垂直对齐
+      vertical-align: middle !important;
+      .el-input{
+        box-sizing: border-box;
+        padding: 0 5px;
+        input{
+          background: #FFF!important;
+        }
+      }
+    }
+    .input_style{
+      position:relative;
+      input{
+        position:absolute;
+        left:0;
+        top:-5px;
+      }
+    }
+  }
+
+  .app-mr20{
+    margin-right: 20px;
+  }
+
+  .app-body-padding{
+    // padding: 0 20px;
+  }
+
+  .icon-beizhu-active{
+    color: #089F48;
+  }
+  .icon-jidan-active{
+    color: rgb(243, 181, 9);
+  }
+  .icon-fenpi-active{
+    color: rgb(24, 137, 195);
+  }
+  .icon-hongbao-active{
+    color: #F35164;
+  }
+  .icon-daiban-active{
+    color: rgb(154, 62, 4);
+  }
+  // 放开那个滚动条！
+  .el-tabs__content {
+    overflow-y: auto!important;
+  }
+
+  .app-mainColor{
+    color: #5E6D82!important;
+  }
+
+  textarea,.el-checkbox__label{
+    color: #5E6D82!important;
+  }
+  .app-w90{
+    width: 90%;
+  }
+  .app-w5{
+    width: 5%;
+  }
+  .el-input__inner {
+    background-color: #F9F9F9!important;
+    font-size: 12px!important;
+    color: #5E6D82!important;
+    height: 24px!important;
+    border: none!important;
+  }
+  .el-checkbox__inner {
+    width: 14px!important;
+    height: 14px!important;
+  }
+  .el-checkbox__inner::after {
+    left: 3px!important;
+    top: 0!important;
+  }
+  .el-select .el-input__inner {
+    border: none!important;
+  }
+  input{
+    color: #5E6D82!important;
+  }
+
+  .el-checkbox__input.is-indeterminate .el-checkbox__inner {
+    background-color: #007E41!important;
+    border-color: #007E41!important;
+  }
+
+  .el-tree-node__content {
+    line-height: 20px!important;
+    height: 20px!important;
+  }
+
+  .el-tree-node__label {
+    .app-ft12;
+  }
+
+  .el-tree {
+    border: none!important;
+    .app-mainColor;
+  }
+
+  .el-tabs__header{
+    margin-bottom: 0!important;
+  }
+
+  .is-active{
+    background: #FFF!important;
+    border-top: 3px solid @activeTitleBg!important;
+  }
+
+  /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+  #app::-webkit-scrollbar{
+   width: 0px;
+   height: 0px;
+   background-color: #F5F5F5;
+  }
+
+  .app-scrollbar-none::-webkit-scrollbar{
+    width: 0px;
+    height: 0px;
+    background-color: #F5F5F5;
+  }
+
+  /*定义滚动条轨道 内阴影+圆角*/
+  ::-webkit-scrollbar-track
+  {
+   -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0);
+   border-radius: 10px;
+   background-color: #F5F5F5;
+  }
+
+  /*定义滑块 内阴影+圆角*/
+  ::-webkit-scrollbar-thumb
+  {
+   border-radius: 10px;
+   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+   background-color: #555;
+  }
+
+  input[type="button"], input[type="submit"], input[type="search"], input[type="reset"] {
+   -webkit-appearance: none;
+  }
+
+  textarea { -webkit-appearance: none;}
+
+  html,body{
+   height: 100%;
+   width: 100%;
+   // background-color: #F5F5F5;
+   min-width: 1200px;
+  }
+
+  .app-center{
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .app-mt5{
+    margin-top: 5px;
+  }
+
+  .app-mt15{
+    margin-top: 15px;
+  }
+
+  .app-pt5{
+    padding-top: 5px;
+  }
+
+  .app-w1000{
+    width: 1000%;
+  }
+
+  // 清除浮动
+  .clearfix:before,
+  .clearfix:after {
+   content: " ";
+   display: table;
+  }
+  .clearfix:after {
+   clear: both;
+  }
+
+  // 左浮动
+  .app-fl{
+   float: left;
+  }
+
+  .app-center{
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  // 右浮动
+  .app-fr{
+   float: right;
+  }
+
+  // 文字居中
+  .app-tc{
+   text-align: center;
+  }
+
+  // 文字左对齐
+  .app-tl{
+   text-align: left;
+  }
+
+  // 文字右对齐
+  .app-tr{
+   text-align: right;
+  }
+
+  // 水平居中
+  .app-center{
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   .app-tc;
+  }
+
+  // 垂直居中
+  .app-vm{
+   verical-align:middle;
+  }
+
+  // 底部对齐
+  .app-vb{
+   verical-align:bottom;
+  }
+
+  // 顶部对齐
+  .app-vt{
+   verical-align:top;
+  }
+
+  // 设置鼠标移动至元素上呈现小手
+  .app-pointer{
+   cursor:pointer;
+  }
+
+  // 设置字体大小为14px
+  .app-ft14{
+   font-size: 14px;
+  }
+
+  .app-ft12{
+    font-size: 12px!important;
+  }
+
+  // 设置字体大小为16px
+  .app-ft16{
+   font-size: 16px;
+  }
+
+  // 去除元素边框
+  .app-bn{
+   border:none;
+  }
+
+  // 元素距离上边距10px
+  .app-mt10{
+   margin-top: 10px;
+  }
+
+  .app-mt20{
+   margin-top: 20px;
+  }
+
+
+  // 元素距离左边距10px
+  .app-ml10{
+   margin-left: 10px;
+  }
+
+  // 元素距离下边距10px
+  .app-mb10{
+   margin-bottom: 10px;
+  }
+
+  // 元素距离右边距10px
+  .app-mr10{
+   margin-right: 10px;
+  }
+
+  .app-ml20{
+    margin-left: 20px;
+  }
+
+  // 设置下边距为0
+  .app-mb0{
+   margin-bottom: 0;
+  }
+
+  // 设置上边距为0
+  .app-mt0{
+   margin-top: 0;
+  }
+
+  // 设置下边距为0
+  .app-ml0{
+   margin-left: 0;
+  }
+
+  // 设置上边距为0
+  .app-mr0{
+   margin-right: 0;
+  }
+
+  // 元素内边距10px
+  .app-p10{
+   padding: 10px;
+  }
+
+  // 设置字体加粗为600
+  .app-fw600{
+   font-weight: 600;
+  }
+
+  // 设置字体加粗为400
+  .app-fw400{
+   font-weight: 400;
+  }
+
+  // 设置文字为纯黑色
+  .app-fc000{
+   color: #000;
+  }
+
+  // 设置文字为纯白色
+  .app-fcfff{
+   color: #FFF!important;
+  }
+
+  // 元素溢出隐藏
+  .app-oh{
+   overflow: hidden;
+  }
+
+  // 元素X轴溢出隐藏
+  .app-oxh{
+   overflow-x: hidden;
+  }
+
+  // 元素Y轴溢出隐藏
+  .app-oyh{
+   overflow-y: hidden;
+  }
+
+  .app-oa{
+    overflow: auto;
+  }
+
+  // 元素相对定位
+  .app-pr{
+   position:relative;
+  }
+
+  // 元素绝对定位
+  .app-pa{
+   position:absolute;
+  }
+
+  // 元素固定定位
+  .app-pf{
+   position:fixed;
+  }
+
+  // 元素不定位
+  .app-ps{
+   position:static;
+  }
+
+  // 设置z-index的最大值
+  .app-zx{
+   z-index:2147483647;
+  }
+
+  // 隐藏元素,但不占据位置
+  .app-hide{
+   display: none;
+  }
+
+  // 表格文字自动换行
+  .app-table-fixed{
+   table-layout:fixed;
+  }
+  .app-table-fixed td{
+   word-wrap: break-word;
+  }
+
+  // 取消元素自带轮廓
+  .app-outline-none{
+   outline: none;
+  }
+
+  // 设置背景为白色
+  .app-bgf{
+   background: #FFF!important;
+  }
+
+  .app-w30{
+   width:30%;
+  }
+
+  .app-w70{
+   width: 70%;
+  }
+
+  .app-pr10{
+   padding-right: 10px;
+   box-sizing:border-box;
+  }
+
+  .app-input{
+   width:90%;
+   height:30px;
+   line-height:30px;
+   color:#535353;
+   margin:0 auto;
+   outline: none;
+   border: 1px solid #D1D1D1;
+   text-indent: 1em;
+  }
+  .app-input-disabled{
+   background: #F5F5F5;
+   color:#939393;
+  }
+
+  .el-checkbox__input.is-checked .el-checkbox__inner {
+    background-color: #007E41!important;
+    border-color: #007E41!important;
+  }
+  .el-checkbox__inner:hover,.el-checkbox__input.is-focus .el-checkbox__inner{
+    border-color: #bfcbd9!important;
+  }
+}
